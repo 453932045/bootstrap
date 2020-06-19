@@ -61,8 +61,7 @@ class FileInput {
   // Public
 
   dispose() {
-    [window, this._element]
-      .forEach(htmlElement => EventHandler.off(htmlElement, EVENT_KEY))
+    [window, this._element].forEach(htmlElement => EventHandler.off(htmlElement, EVENT_KEY))
 
     Data.removeData(this._element, DATA_KEY)
     this._element = null
@@ -92,9 +91,9 @@ class FileInput {
     }
 
     if (this._input.value.indexOf(FAKE_PATH) !== -1) {
-      const splittedValue = this._input.value.split(FAKE_PATH_SEPARATOR)
+      const splitValue = this._input.value.split(FAKE_PATH_SEPARATOR)
 
-      return splittedValue[splittedValue.length - 1]
+      return splitValue[splitValue.length - 1]
     }
 
     return this._input.value
@@ -124,8 +123,8 @@ class FileInput {
  */
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, event => {
   const fileInputNode = event.target.closest(SELECTOR_DATA_TOGGLE)
-
   let data = Data.getData(fileInputNode, DATA_KEY)
+
   if (!data) {
     data = new FileInput(fileInputNode)
   }
