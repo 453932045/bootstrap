@@ -10,13 +10,13 @@ import Button from './src/button'
 import Carousel from './src/carousel'
 import Collapse from './src/collapse'
 import Dropdown from './src/dropdown'
+import FileInput from './src/file-input'
 import Modal from './src/modal'
 import Popover from './src/popover'
 import ScrollSpy from './src/scrollspy'
 import Tab from './src/tab'
 import Toast from './src/toast'
 import Tooltip from './src/tooltip'
-import FileInput from './src/file-input'
 
 export default {
   Alert,
@@ -24,11 +24,11 @@ export default {
   Carousel,
   Collapse,
   Dropdown,
+  FileInput,
   Modal,
   Popover,
   ScrollSpy,
   Tab,
   Toast,
-  Tooltip,
-  FileInput
+  Tooltip
 }
